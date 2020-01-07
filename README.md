@@ -1,2 +1,2 @@
 # yiipopuptest
-test task for goodly.pro
+test for goodly.pro
