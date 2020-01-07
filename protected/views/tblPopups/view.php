@@ -34,6 +34,5 @@ $this->widget('zii.widgets.CDetailView', array(
 <br />
 <b>JS Code:</b> <br />
 <output>
-&lt;script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME'];?>/popuptest/index.php?r=tblPopups/js&popup_id=<?php echo $model->id; ?>"&gt;&lt;/script&gt;
-
+&lt;script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME'].$_SERVER['DOCUMENT_URI'];?>?r=tblPopups/js&popup_id=<?php echo $model->id; ?>"&gt;&lt;/script&gt;
 </output>
