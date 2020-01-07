@@ -1,0 +1,2223 @@
+2020/01/06 22:24:01 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "tblPopups". in /Users/h/www/yii1/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups')
+#1 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups
+---
+2020/01/06 22:24:10 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "TblPopups". in /Users/h/www/yii1/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('TblPopups')
+#1 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/popuptest/index.php?r=TblPopups
+---
+2020/01/06 22:24:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "popups". in /Users/h/www/yii1/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('popups')
+#1 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/popuptest/index.php?r=popups
+---
+2020/01/06 22:24:27 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "popup". in /Users/h/www/yii1/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('popup')
+#1 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/popuptest/index.php?r=popup
+---
+2020/01/06 22:31:07 [error] [system.db.CDbCommand] Error in preparing SQL: DROP TABLE 'tbl_news'
+2020/01/06 22:31:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: tbl_news. The SQL statement executed was: DROP TABLE 'tbl_news'.
+2020/01/06 22:35:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 17 database schema has changed. The SQL statement executed was: INSERT INTO 'tbl_migration' ("version", "apply_time") VALUES (:version, :apply_time).
+2020/01/06 22:35:27 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 17 database schema has changed. The SQL statement executed was: INSERT INTO 'tbl_migration' ("version", "apply_time") VALUES (:version, :apply_time) in /Users/h/www/yii1/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/CDbCommand.php(1278): CDbCommand->execute(Array)
+#1 /Users/h/www/yii1/framework/cli/commands/MigrateCommand.php(419): CDbCommand->insert('tbl_migration', Array)
+#2 /Users/h/www/yii1/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m200106_223459_...')
+#3 [internal function]: MigrateCommand->actionUp(Array)
+#4 /Users/h/www/yii1/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#5 /Users/h/www/yii1/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Users/h/www/yii1/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Users/h/www/yii1/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#8 /Users/h/www/yii1/framework/yiic.php(33): CApplication->run()
+#9 /Users/h/www/popuptest/protected/yiic.php(7): require_once('/Users/h/www/yi...')
+#10 /Users/h/www/popuptest/protected/yiic(4): require_once('/Users/h/www/po...')
+#11 {main}
+---
+2020/01/06 22:46:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_popups.state. The SQL statement executed was: INSERT INTO 'tbl_popups' ("title", "content", "vews") VALUES (:yp0, :yp1, :yp2).
+in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php (73)
+in /Users/h/www/popuptest/index.php (13)
+2020/01/06 22:46:52 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: tbl_popups.state. The SQL statement executed was: INSERT INTO 'tbl_popups' ("title", "content", "vews") VALUES (:yp0, :yp1, :yp2) in /Users/h/www/yii1/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(1083): CDbCommand->execute()
+#1 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(73): CActiveRecord->save()
+#3 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionCreate()
+#4 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/creat...')
+#14 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/create
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/create
+---
+2020/01/06 22:48:04 [error] [exception.CDbException] CDbException: The table "tbl_popups" for active record class "TblPopups" cannot be found in the database. in /Users/h/www/yii1/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TblPopups))
+#1 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(65): CActiveRecord->__construct()
+#3 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionCreate()
+#4 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/creat...')
+#14 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/create
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/index
+---
+2020/01/06 22:48:04 [error] [exception.CDbException] CDbException: The table "tbl_popups" for active record class "TblPopups" cannot be found in the database. in /Users/h/www/yii1/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TblPopups))
+#1 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(1609): CActiveRecord->getTableSchema()
+#3 /Users/h/www/yii1/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /Users/h/www/yii1/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /Users/h/www/yii1/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /Users/h/www/yii1/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /Users/h/www/yii1/framework/zii/widgets/CBaseListView.php(125): CDataProvider->getData()
+#8 /Users/h/www/yii1/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /Users/h/www/yii1/framework/web/CBaseController.php(147): CListView->init()
+#10 /Users/h/www/yii1/framework/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /Users/h/www/popuptest/protected/views/tblPopups/index.php(19): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /Users/h/www/yii1/framework/web/CBaseController.php(126): require('/Users/h/www/po...')
+#13 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#14 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#15 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('index', Array, true)
+#16 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(127): CController->render('index', Array)
+#17 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionIndex()
+#18 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#22 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#25 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('index')
+#27 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/index')
+#28 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#29 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/index
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/admin
+---
+2020/01/06 22:48:05 [error] [exception.CDbException] CDbException: The table "tbl_popups" for active record class "TblPopups" cannot be found in the database. in /Users/h/www/yii1/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TblPopups))
+#1 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(136): CActiveRecord->__construct('search')
+#3 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionAdmin()
+#4 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('admin')
+#13 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/admin')
+#14 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/admin
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/index
+---
+2020/01/06 22:48:06 [error] [exception.CDbException] CDbException: The table "tbl_popups" for active record class "TblPopups" cannot be found in the database. in /Users/h/www/yii1/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TblPopups))
+#1 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(1609): CActiveRecord->getTableSchema()
+#3 /Users/h/www/yii1/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /Users/h/www/yii1/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /Users/h/www/yii1/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /Users/h/www/yii1/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /Users/h/www/yii1/framework/zii/widgets/CBaseListView.php(125): CDataProvider->getData()
+#8 /Users/h/www/yii1/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /Users/h/www/yii1/framework/web/CBaseController.php(147): CListView->init()
+#10 /Users/h/www/yii1/framework/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /Users/h/www/popuptest/protected/views/tblPopups/index.php(19): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /Users/h/www/yii1/framework/web/CBaseController.php(126): require('/Users/h/www/po...')
+#13 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#14 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#15 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('index', Array, true)
+#16 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(127): CController->render('index', Array)
+#17 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionIndex()
+#18 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#22 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#25 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('index')
+#27 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/index')
+#28 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#29 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/index
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/admin
+---
+2020/01/06 22:48:06 [error] [exception.CDbException] CDbException: The table "tbl_popups" for active record class "TblPopups" cannot be found in the database. in /Users/h/www/yii1/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TblPopups))
+#1 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(136): CActiveRecord->__construct('search')
+#3 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionAdmin()
+#4 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('admin')
+#13 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/admin')
+#14 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/admin
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/index
+---
+2020/01/06 22:48:07 [error] [exception.CDbException] CDbException: The table "tbl_popups" for active record class "TblPopups" cannot be found in the database. in /Users/h/www/yii1/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TblPopups))
+#1 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(1609): CActiveRecord->getTableSchema()
+#3 /Users/h/www/yii1/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /Users/h/www/yii1/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /Users/h/www/yii1/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /Users/h/www/yii1/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /Users/h/www/yii1/framework/zii/widgets/CBaseListView.php(125): CDataProvider->getData()
+#8 /Users/h/www/yii1/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /Users/h/www/yii1/framework/web/CBaseController.php(147): CListView->init()
+#10 /Users/h/www/yii1/framework/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /Users/h/www/popuptest/protected/views/tblPopups/index.php(19): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /Users/h/www/yii1/framework/web/CBaseController.php(126): require('/Users/h/www/po...')
+#13 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#14 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#15 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('index', Array, true)
+#16 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(127): CController->render('index', Array)
+#17 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionIndex()
+#18 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#22 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#25 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('index')
+#27 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/index')
+#28 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#29 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/index
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/view&id=1
+---
+2020/01/06 22:48:10 [error] [exception.CDbException] CDbException: The table "tbl_popups" for active record class "TblPopups" cannot be found in the database. in /Users/h/www/yii1/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TblPopups))
+#1 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(1609): CActiveRecord->getTableSchema()
+#3 /Users/h/www/yii1/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /Users/h/www/yii1/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /Users/h/www/yii1/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /Users/h/www/yii1/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /Users/h/www/yii1/framework/zii/widgets/CBaseListView.php(125): CDataProvider->getData()
+#8 /Users/h/www/yii1/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /Users/h/www/yii1/framework/web/CBaseController.php(147): CListView->init()
+#10 /Users/h/www/yii1/framework/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /Users/h/www/popuptest/protected/views/tblPopups/index.php(19): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /Users/h/www/yii1/framework/web/CBaseController.php(126): require('/Users/h/www/po...')
+#13 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#14 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#15 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('index', Array, true)
+#16 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(127): CController->render('index', Array)
+#17 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionIndex()
+#18 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#22 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#25 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('')
+#27 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups')
+#28 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#29 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups
+---
+2020/01/06 22:48:11 [error] [exception.CDbException] CDbException: The table "tbl_popups" for active record class "TblPopups" cannot be found in the database. in /Users/h/www/yii1/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TblPopups))
+#1 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(1609): CActiveRecord->getTableSchema()
+#3 /Users/h/www/yii1/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /Users/h/www/yii1/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /Users/h/www/yii1/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /Users/h/www/yii1/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /Users/h/www/yii1/framework/zii/widgets/CBaseListView.php(125): CDataProvider->getData()
+#8 /Users/h/www/yii1/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /Users/h/www/yii1/framework/web/CBaseController.php(147): CListView->init()
+#10 /Users/h/www/yii1/framework/web/CBaseController.php(181): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /Users/h/www/popuptest/protected/views/tblPopups/index.php(19): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /Users/h/www/yii1/framework/web/CBaseController.php(126): require('/Users/h/www/po...')
+#13 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#14 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#15 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('index', Array, true)
+#16 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(127): CController->render('index', Array)
+#17 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionIndex()
+#18 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#22 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#25 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('')
+#27 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups')
+#28 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#29 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups
+---
+2020/01/06 22:54:40 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_popups' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"title" varchar(255) NOT NULL,
+	"content" text,
+	"vews" int,
+	"state" int NOT NULL DEFAULT (1)
+)
+2020/01/06 22:54:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'tbl_popups' already exists. The SQL statement executed was: CREATE TABLE 'tbl_popups' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"title" varchar(255) NOT NULL,
+	"content" text,
+	"vews" int,
+	"state" int NOT NULL DEFAULT (1)
+).
+2020/01/06 22:54:48 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_popups' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"title" varchar(255) NOT NULL,
+	"content" text,
+	"vews" int,
+	"state" int NOT NULL DEFAULT (1)
+)
+2020/01/06 22:54:48 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'tbl_popups' already exists. The SQL statement executed was: CREATE TABLE 'tbl_popups' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"title" varchar(255) NOT NULL,
+	"content" text,
+	"vews" int,
+	"state" int NOT NULL DEFAULT (1)
+).
+2020/01/06 22:55:16 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_popups' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"title" varchar(255) NOT NULL,
+	"content" text,
+	"vews" int,
+	"state" int NOT NULL DEFAULT (1)
+)
+2020/01/06 22:55:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'tbl_popups' already exists. The SQL statement executed was: CREATE TABLE 'tbl_popups' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"title" varchar(255) NOT NULL,
+	"content" text,
+	"vews" int,
+	"state" int NOT NULL DEFAULT (1)
+).
+2020/01/06 23:28:52 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:29:46 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:29:47 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:29:47 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:30:01 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:30:13 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:30:13 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:30:14 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:31:40 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:31:41 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:31:41 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:32:29 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:32:30 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:32:30 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:32:30 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:32:30 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:32:40 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:32:42 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:32:43 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:32:43 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:32:43 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:32:47 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/06 23:32:51 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:32:54 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('Js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/Js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/Js
+---
+2020/01/06 23:32:55 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('Js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/Js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/Js
+---
+2020/01/06 23:39:07 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('Js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/Js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/Js
+---
+2020/01/06 23:39:14 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:40:16 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/view')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view
+---
+2020/01/06 23:40:54 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:40:56 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:41:05 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:41:13 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:41:43 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:41:43 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:41:43 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:15 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:16 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:17 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:17 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:18 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:18 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:18 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:18 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:18 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:32 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php:183
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:42 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:42 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:43 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:48 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:43:49 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:44:30 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:44:55 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:44:56 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:45:43 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:45:43 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:45:51 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:45:51 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:46:03 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:46:04 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:46:04 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:46:04 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:47:12 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:47:12 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:47:13 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:47:13 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:47:13 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:47:58 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:47:58 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/06 23:47:59 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/07 00:46:59 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/07 00:47:08 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "actionJs". in /Users/h/www/yii1/framework/web/CController.php:486
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(270): CController->missingAction('actionJs')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('actionJs')
+#2 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/actio...')
+#3 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/actionJs
+---
+2020/01/07 00:47:12 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/07 02:25:54 [error] [php] Undefined variable: model (/Users/h/www/popuptest/protected/views/tblPopups/js.php:30)
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(872): TblPopupsController->renderFile()
+#1 /Users/h/www/yii1/framework/web/CController.php(785): TblPopupsController->renderPartial()
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(60): TblPopupsController->render()
+#3 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#4 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): TblPopupsController->runAction()
+#6 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): TblPopupsController->filterAccessControl()
+#9 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/h/www/yii1/framework/web/CController.php(265): TblPopupsController->runActionWithFilters()
+#12 /Users/h/www/yii1/framework/web/CWebApplication.php(282): TblPopupsController->run()
+#13 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/h/www/popuptest/index.php(13): CWebApplication->run()
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+in /Users/h/www/popuptest/protected/views/tblPopups/js.php (30)
+in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php (60)
+in /Users/h/www/popuptest/index.php (13)
+2020/01/07 02:26:05 [error] [php] Undefined variable: model (/Users/h/www/popuptest/protected/views/tblPopups/js.php:30)
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(872): TblPopupsController->renderFile()
+#1 /Users/h/www/yii1/framework/web/CController.php(785): TblPopupsController->renderPartial()
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(60): TblPopupsController->render()
+#3 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#4 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): TblPopupsController->runAction()
+#6 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): TblPopupsController->filterAccessControl()
+#9 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/h/www/yii1/framework/web/CController.php(265): TblPopupsController->runActionWithFilters()
+#12 /Users/h/www/yii1/framework/web/CWebApplication.php(282): TblPopupsController->run()
+#13 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/h/www/popuptest/index.php(13): CWebApplication->run()
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+in /Users/h/www/popuptest/protected/views/tblPopups/js.php (30)
+in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php (60)
+in /Users/h/www/popuptest/index.php (13)
+2020/01/07 02:26:12 [error] [php] Undefined variable: model (/Users/h/www/popuptest/protected/views/tblPopups/js.php:30)
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(872): TblPopupsController->renderFile()
+#1 /Users/h/www/yii1/framework/web/CController.php(785): TblPopupsController->renderPartial()
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(60): TblPopupsController->render()
+#3 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#4 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): TblPopupsController->runAction()
+#6 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): TblPopupsController->filterAccessControl()
+#9 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/h/www/yii1/framework/web/CController.php(265): TblPopupsController->runActionWithFilters()
+#12 /Users/h/www/yii1/framework/web/CWebApplication.php(282): TblPopupsController->run()
+#13 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/h/www/popuptest/index.php(13): CWebApplication->run()
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+in /Users/h/www/popuptest/protected/views/tblPopups/js.php (30)
+in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php (60)
+in /Users/h/www/popuptest/index.php (13)
+2020/01/07 02:26:13 [error] [php] Undefined variable: model (/Users/h/www/popuptest/protected/views/tblPopups/js.php:30)
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(872): TblPopupsController->renderFile()
+#1 /Users/h/www/yii1/framework/web/CController.php(785): TblPopupsController->renderPartial()
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(60): TblPopupsController->render()
+#3 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#4 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): TblPopupsController->runAction()
+#6 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): TblPopupsController->filterAccessControl()
+#9 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/h/www/yii1/framework/web/CController.php(265): TblPopupsController->runActionWithFilters()
+#12 /Users/h/www/yii1/framework/web/CWebApplication.php(282): TblPopupsController->run()
+#13 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/h/www/popuptest/index.php(13): CWebApplication->run()
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+in /Users/h/www/popuptest/protected/views/tblPopups/js.php (30)
+in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php (60)
+in /Users/h/www/popuptest/index.php (13)
+2020/01/07 02:26:14 [error] [php] Undefined variable: model (/Users/h/www/popuptest/protected/views/tblPopups/js.php:30)
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(872): TblPopupsController->renderFile()
+#1 /Users/h/www/yii1/framework/web/CController.php(785): TblPopupsController->renderPartial()
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(60): TblPopupsController->render()
+#3 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#4 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): TblPopupsController->runAction()
+#6 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): TblPopupsController->filterAccessControl()
+#9 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/h/www/yii1/framework/web/CController.php(265): TblPopupsController->runActionWithFilters()
+#12 /Users/h/www/yii1/framework/web/CWebApplication.php(282): TblPopupsController->run()
+#13 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/h/www/popuptest/index.php(13): CWebApplication->run()
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+in /Users/h/www/popuptest/protected/views/tblPopups/js.php (30)
+in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php (60)
+in /Users/h/www/popuptest/index.php (13)
+2020/01/07 02:27:01 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /Users/h/www/yii1/framework/web/CController.php:337
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#9 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#10 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js
+---
+2020/01/07 02:30:35 [error] [php] Creating default object from empty value (/Users/h/www/popuptest/protected/controllers/TblPopupsController.php:61)
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): TblPopupsController->runAction()
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): TblPopupsController->filterAccessControl()
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): TblPopupsController->runActionWithFilters()
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): TblPopupsController->run()
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CWebApplication->run()
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=1
+in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php (61)
+in /Users/h/www/popuptest/index.php (13)
+2020/01/07 02:33:08 [error] [php] Undefined index: popup_id (/Users/h/www/popuptest/protected/controllers/TblPopupsController.php:61)
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): TblPopupsController->runAction()
+#1 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/h/www/yii1/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): TblPopupsController->filterAccessControl()
+#4 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/h/www/yii1/framework/web/CController.php(265): TblPopupsController->runActionWithFilters()
+#7 /Users/h/www/yii1/framework/web/CWebApplication.php(282): TblPopupsController->run()
+#8 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/h/www/popuptest/index.php(13): CWebApplication->run()
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=1
+in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php (61)
+in /Users/h/www/popuptest/index.php (13)
+2020/01/07 02:40:00 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:62
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CWebApplication.php(276): CWebApplication->createController('js/')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#2 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=1
+---
+2020/01/07 02:40:01 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:62
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CWebApplication.php(276): CWebApplication->createController('js/')
+#1 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#2 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=1
+---
+2020/01/07 02:42:39 [error] [exception.CException] CException: The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional. in /Users/h/www/yii1/framework/zii/widgets/CDetailView.php:185
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CBaseController.php(182): CDetailView->run()
+#1 /Users/h/www/popuptest/protected/views/tblPopups/view.php(22): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Users/h/www/yii1/framework/web/CBaseController.php(126): require('/Users/h/www/po...')
+#3 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#4 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#5 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('view', Array, true)
+#6 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(84): CController->render('view', Array)
+#7 [internal function]: TblPopupsController->actionView('1')
+#8 /Users/h/www/yii1/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(TblPopupsController), Array)
+#9 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TblPopupsController), Object(ReflectionMethod), Array)
+#10 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/view')
+#20 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view&id=1
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/admin
+---
+2020/01/07 02:44:06 [error] [exception.CException] CException: Property "TblPopups.js" is not defined. in /Users/h/www/yii1/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(162): CComponent->__set('js', 'dfsdfsdfs')
+#1 /Users/h/www/popuptest/protected/views/tblPopups/view.php(23): CActiveRecord->__set('js', 'dfsdfsdfs')
+#2 /Users/h/www/yii1/framework/web/CBaseController.php(126): require('/Users/h/www/po...')
+#3 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#4 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#5 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('view', Array, true)
+#6 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(84): CController->render('view', Array)
+#7 [internal function]: TblPopupsController->actionView('1')
+#8 /Users/h/www/yii1/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(TblPopupsController), Array)
+#9 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TblPopupsController), Object(ReflectionMethod), Array)
+#10 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/view')
+#20 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view&id=1
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/admin
+---
+2020/01/07 02:44:07 [error] [exception.CException] CException: Property "TblPopups.js" is not defined. in /Users/h/www/yii1/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(162): CComponent->__set('js', 'dfsdfsdfs')
+#1 /Users/h/www/popuptest/protected/views/tblPopups/view.php(23): CActiveRecord->__set('js', 'dfsdfsdfs')
+#2 /Users/h/www/yii1/framework/web/CBaseController.php(126): require('/Users/h/www/po...')
+#3 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#4 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#5 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('view', Array, true)
+#6 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(84): CController->render('view', Array)
+#7 [internal function]: TblPopupsController->actionView('1')
+#8 /Users/h/www/yii1/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(TblPopupsController), Array)
+#9 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TblPopupsController), Object(ReflectionMethod), Array)
+#10 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/view')
+#20 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view&id=1
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/admin
+---
+2020/01/07 02:45:09 [error] [exception.CException] CException: Property "TblPopups.js" is not defined. in /Users/h/www/yii1/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(162): CComponent->__set('js', 'dfsdfsdfs')
+#1 /Users/h/www/popuptest/protected/views/tblPopups/view.php(23): CActiveRecord->__set('js', 'dfsdfsdfs')
+#2 /Users/h/www/yii1/framework/web/CBaseController.php(126): require('/Users/h/www/po...')
+#3 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#4 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#5 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('view', Array, true)
+#6 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(84): CController->render('view', Array)
+#7 [internal function]: TblPopupsController->actionView('1')
+#8 /Users/h/www/yii1/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(TblPopupsController), Array)
+#9 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TblPopupsController), Object(ReflectionMethod), Array)
+#10 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/view')
+#20 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view&id=1
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/admin
+---
+2020/01/07 02:45:10 [error] [exception.CException] CException: Property "TblPopups.js" is not defined. in /Users/h/www/yii1/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/h/www/yii1/framework/db/ar/CActiveRecord.php(162): CComponent->__set('js', 'dfsdfsdfs')
+#1 /Users/h/www/popuptest/protected/views/tblPopups/view.php(23): CActiveRecord->__set('js', 'dfsdfsdfs')
+#2 /Users/h/www/yii1/framework/web/CBaseController.php(126): require('/Users/h/www/po...')
+#3 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#4 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#5 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('view', Array, true)
+#6 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(84): CController->render('view', Array)
+#7 [internal function]: TblPopupsController->actionView('1')
+#8 /Users/h/www/yii1/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(TblPopupsController), Array)
+#9 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TblPopupsController), Object(ReflectionMethod), Array)
+#10 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/view')
+#20 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view&id=1
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/admin
+---
+2020/01/07 03:01:41 [error] [php] Undefined variable: SERVER_NAME (/Users/h/www/popuptest/protected/views/tblPopups/view.php:37)
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(872): TblPopupsController->renderFile()
+#1 /Users/h/www/yii1/framework/web/CController.php(785): TblPopupsController->renderPartial()
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(84): TblPopupsController->render()
+#3 unknown(0): TblPopupsController->actionView()
+#4 /Users/h/www/yii1/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): TblPopupsController->runAction()
+#8 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#10 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): TblPopupsController->filterAccessControl()
+#11 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#13 /Users/h/www/yii1/framework/web/CController.php(265): TblPopupsController->runActionWithFilters()
+#14 /Users/h/www/yii1/framework/web/CWebApplication.php(282): TblPopupsController->run()
+#15 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /Users/h/www/popuptest/index.php(13): CWebApplication->run()
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view&id=2
+in /Users/h/www/popuptest/protected/views/tblPopups/view.php (37)
+in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php (84)
+in /Users/h/www/popuptest/index.php (13)
+2020/01/07 03:01:51 [error] [php] Undefined variable: _SERVER_NAME (/Users/h/www/popuptest/protected/views/tblPopups/view.php:37)
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CController.php(872): TblPopupsController->renderFile()
+#1 /Users/h/www/yii1/framework/web/CController.php(785): TblPopupsController->renderPartial()
+#2 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(84): TblPopupsController->render()
+#3 unknown(0): TblPopupsController->actionView()
+#4 /Users/h/www/yii1/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): TblPopupsController->runAction()
+#8 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#10 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): TblPopupsController->filterAccessControl()
+#11 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#12 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#13 /Users/h/www/yii1/framework/web/CController.php(265): TblPopupsController->runActionWithFilters()
+#14 /Users/h/www/yii1/framework/web/CWebApplication.php(282): TblPopupsController->run()
+#15 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /Users/h/www/popuptest/index.php(13): CWebApplication->run()
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view&id=2
+in /Users/h/www/popuptest/protected/views/tblPopups/view.php (37)
+in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php (84)
+in /Users/h/www/popuptest/index.php (13)
+2020/01/07 03:02:14 [error] [exception.ParseError] ParseError: syntax error, unexpected 'echo' (T_ECHO) in /Users/h/www/popuptest/protected/views/tblPopups/view.php:37
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#1 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#2 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('view', Array, true)
+#3 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(84): CController->render('view', Array)
+#4 [internal function]: TblPopupsController->actionView('2')
+#5 /Users/h/www/yii1/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(TblPopupsController), Array)
+#6 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TblPopupsController), Object(ReflectionMethod), Array)
+#7 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('view')
+#16 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/view')
+#17 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view&id=2
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/create
+---
+2020/01/07 03:02:15 [error] [exception.ParseError] ParseError: syntax error, unexpected 'echo' (T_ECHO) in /Users/h/www/popuptest/protected/views/tblPopups/view.php:37
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#1 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#2 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('view', Array, true)
+#3 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(84): CController->render('view', Array)
+#4 [internal function]: TblPopupsController->actionView('2')
+#5 /Users/h/www/yii1/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(TblPopupsController), Array)
+#6 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TblPopupsController), Object(ReflectionMethod), Array)
+#7 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('view')
+#16 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/view')
+#17 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view&id=2
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/create
+---
+2020/01/07 03:02:16 [error] [exception.ParseError] ParseError: syntax error, unexpected 'echo' (T_ECHO) in /Users/h/www/popuptest/protected/views/tblPopups/view.php:37
+Stack trace:
+#0 /Users/h/www/yii1/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/h/www/po...', Array, true)
+#1 /Users/h/www/yii1/framework/web/CController.php(872): CBaseController->renderFile('/Users/h/www/po...', Array, true)
+#2 /Users/h/www/yii1/framework/web/CController.php(785): CController->renderPartial('view', Array, true)
+#3 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(84): CController->render('view', Array)
+#4 [internal function]: TblPopupsController->actionView('2')
+#5 /Users/h/www/yii1/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(TblPopupsController), Array)
+#6 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TblPopupsController), Object(ReflectionMethod), Array)
+#7 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('view')
+#16 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/view')
+#17 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/view&id=2
+HTTP_REFERER=http://localhost/popuptest/index.php?r=tblPopups/create
+---
+2020/01/07 03:10:08 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=
+---
+2020/01/07 03:10:18 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:10:23 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:10:28 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:11:00 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:11:01 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:11:02 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:11:02 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:11:02 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:11:02 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:11:02 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:11:21 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:11:30 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('99')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=99
+---
+2020/01/07 03:11:34 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('1')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=1
+---
+2020/01/07 03:11:39 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel('3')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=3
+---
+2020/01/07 03:12:53 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel(99)
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=3
+---
+2020/01/07 03:12:55 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:189
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(61): TblPopupsController->loadModel(99)
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=2
+---
+2020/01/07 03:15:08 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /Users/h/www/popuptest/protected/controllers/TblPopupsController.php:197
+Stack trace:
+#0 /Users/h/www/popuptest/protected/controllers/TblPopupsController.php(62): TblPopupsController->loadModel('22')
+#1 /Users/h/www/yii1/framework/web/actions/CInlineAction.php(49): TblPopupsController->actionJs()
+#2 /Users/h/www/yii1/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Users/h/www/yii1/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/h/www/yii1/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 /Users/h/www/yii1/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/h/www/yii1/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/h/www/yii1/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/h/www/yii1/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/h/www/yii1/framework/web/CWebApplication.php(282): CController->run('js')
+#11 /Users/h/www/yii1/framework/web/CWebApplication.php(141): CWebApplication->runController('tblPopups/js')
+#12 /Users/h/www/yii1/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/h/www/popuptest/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/popuptest/index.php?r=tblPopups/js&popup_id=22
+---
