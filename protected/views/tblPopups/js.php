@@ -31,6 +31,6 @@ header('Content-Type: text/javascript');
 
 		$('body').append('<div id="ex1" class="modal"><p><?php echo $model->content; ?></p><a href="#" rel="modal:close">Close</a></div>');  
 		$('#ex1').addClass("modal");
-		$('#ex1').modal();
+		$('#ex1').modal({fadeDuration: 1000, fadeDelay: 0.50});
 	}
 }
